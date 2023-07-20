@@ -1,0 +1,35 @@
+<h1 class="recipe-detail-heading">Recipe Details</h1>
+<div class="recipe-detail" *ngIf="!isLoaded">
+  <div class="grid-container">
+    <div class="grid-item">
+      <h2 class="recipe-label">{{recipe?.label}}</h2>
+      <img [src]="recipe?.image" alt="Recipe Image" class="recipe-image">
+      <h2 class="recipe-source">{{recipe?.source}}</h2>
+      <br/><br/>
+      <button class="main-menu-button" (click)="searchMore()">Main Menu</button><br/><br/>
+    <a [href]="recipe?.url" target="_blank" class="full-recipe">See full recipe</a>
+
+    </div>
+    <div class="grid-item">
+      <h3 class="list-heading">Ingredients</h3>
+      <mat-list>
+        <mat-list-item *ngFor="let ingredient of recipe?.ingredients">
+          <mat-icon mat-list-icon class="icon-gap">
+            <img [src]="ingredient.image" alt="Ingredient Image" class="avatar-image">
+          </mat-icon>
+          <div class="list-item-content">
+            <p mat-line>{{ ingredient.text }}</p>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div class="grid-item">
+      <h3 class="list-heading">Nutritional Values</h3>
+      <ul class="digest-list">
+        <li *ngFor="let digest of recipe?.digest">{{ digest.label }}: {{ digest.total | number : '1.0-0' }} {{
+          digest.unit}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoaded">Loading....</div>

@@ -1,0 +1,25 @@
+<nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand" href="#">
+      Shadab.com
+      </div>
+      <div class="navbar-search">
+        <input type="text" placeholder="Search recipes" [(ngModel)]="searchQuery">
+        <button (click)="onSearch()">Search</button>
+      </div>
+    </div>
+  </nav>
+<h3>Featured Recipes</h3>
+  <!-- Display featured recipes here -->
+<div class="recipe-grid"*ngIf="!isLoading">
+    <mat-card *ngFor="let recipe of featuredRecipes" [routerLink]="['/recipe-detail', recipe.uri]"  >
+    <mat-card-content>
+        <img class = "mat-card-image" [src]="recipe.image"/>
+        <p> {{ recipe.label }}</p>
+        <p> {{ recipe.ingredients.length }} Ingredients | {{ recipe.calories | number : '1.0-0' }} Calories</p>
+        <p>{{ recipe.source }}</p>
+    </mat-card-content>
+    </mat-card>
+</div>
+<div *ngIf="isLoading">Loading....</div>
+

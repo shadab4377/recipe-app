@@ -1,0 +1,127 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Three columns with equal width */
+    grid-gap: 20px; /* Gap between grid items */
+  }
+/* styles.css or navbar.component.css */
+.navbar {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+  
+  .navbar-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-search input {
+    padding: 5px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .navbar-search button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .list-heading {
+    text-indent: 70px;
+    margin-bottom: 10px;
+    margin-top: 120px;
+  }
+  .main-menu-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 90px;
+  }
+  
+  .main-menu-button:hover {
+    background-color: yellowgreen;
+  }
+  
+  .icon-gap {
+    margin-right: 25px;
+  }
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-container {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    margin-right: 10px; /* Add spacing between image and text */
+  }
+  
+  .text-container {
+    flex-grow: 1; /* Allow the text to grow and fill remaining space */
+  }
+  .avatar-image {
+    width: 40px; /* Adjust the width of the avatar image */
+    height: 40px; /* Adjust the height of the avatar image */
+    border-radius: 50%; /* Apply a circular border radius */
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Equal width columns */
+    gap: 20px; /* Optional gap between columns */
+  }
+  
+  .grid-item {
+    /* Optional styling for the columns */
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  .recipe-detail-heading  {
+    text-align: center;
+  }
+  .full-recipe{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 80px;
+  }
+  .full-recipe:hover{
+    background-color:lightblue;
+  }
+  .recipe-label{
+    text-align: center;
+  }
+  .recipe-source{
+    text-align:center;
+  }
+
